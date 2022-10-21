@@ -223,13 +223,13 @@ foreign_timer_service(void *foreign_loop)
 int main(int argc, const char **argv)
 {
 	const char *p;
-	int logs = LLL_USER | LLL_ERR | LLL_WARN | LLL_NOTICE
+	int logs = LLL_USER | LLL_ERR | LLL_WARN | LLL_NOTICE | LLL_INFO;
 			/* for LLL_ verbosity above NOTICE to be built into lws,
 			 * lws must have been configured and built with
 			 * -DCMAKE_BUILD_TYPE=DEBUG instead of =RELEASE */
 			/* | LLL_INFO */ /* | LLL_PARSER */ /* | LLL_HEADER */
 			/* | LLL_EXT */ /* | LLL_CLIENT */ /* | LLL_LATENCY */
-			/* | LLL_DEBUG */;
+			// /* | LLL_DEBUG */;
 
 	if ((p = lws_cmdline_option(argc, argv, "-d")))
 		logs = atoi(p);

@@ -30,12 +30,12 @@
 
 include_directories(.)
 
-set(LWS_LIBEV_LIBRARIES CACHE PATH "Path to the libev library")
-set(LWS_LIBEV_INCLUDE_DIRS CACHE PATH "Path to the libev include directory")
+set(LWS_LIBEV_LIBRARIES CACHE PATH "/home/mahi/repos/viv_clion_build_debug/sdkroot/libev/include")
+set(LWS_LIBEV_INCLUDE_DIRS CACHE PATH "/home/mahi/repos/viv_clion_build_debug/sdkroot/libev")
 
 if (NOT LIBEV_FOUND)
-	find_path(LIBEV_INCLUDE_DIRS NAMES ev.h)
-	find_library(LIBEV_LIBRARIES NAMES ev)
+	find_path(LIBEV_INCLUDE_DIRS NAMES ev.h PATHS "/home/mahi/repos/viv_clion_build_debug/sdkroot/libev/include")
+	find_library(LIBEV_LIBRARIES NAMES ev PATHS "/home/mahi/repos/viv_clion_build_debug/sdkroot/libev/lib")
 endif()
 message("libev include dir: ${LIBEV_INCLUDE_DIRS}")
 message("libev libraries: ${LIBEV_LIBRARIES}")
