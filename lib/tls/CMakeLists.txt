@@ -45,6 +45,7 @@ if (LWS_WITH_CYASSL)
 	set(LWS_WOLFSSL_INCLUDE_DIRS ${LWS_CYASSL_INCLUDE_DIRS} CACHE PATH "Path to wolfSSL/CyaSSL header files" FORCE PARENT_SCOPE)
 endif()
 
+# set openssl libraries and include dirs
 set(LWS_OPENSSL_LIBRARIES CACHE PATH "Path to the OpenSSL library" )
 set(LWS_OPENSSL_INCLUDE_DIRS CACHE PATH "Path to the OpenSSL include directory" )
 set(LWS_WOLFSSL_LIBRARIES CACHE PATH "Path to the wolfSSL library" )
